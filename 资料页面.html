@@ -16,6 +16,17 @@
         /* 内容区域默认隐藏，只显示第一个 */
         .content-area { display: none; }
         .content-area.active { display: block; }
+        /* 链接黄色样式（加深色背景提升可读性，避免黄色在白色背景上看不清） */
+        .custom-link { 
+            color: darkred !important; 
+            padding: 2px 4px; 
+            border-radius: 2px; 
+            text-decoration: none; /* 去除默认下划线 */
+        }
+        .custom-link:hover { 
+            color: #fff !important; 
+            background-color: #666; /* 悬浮时优化样式 */
+        }
     </style>
 </head>
 <body>
@@ -27,26 +38,31 @@
                 <ul class="navbar-nav me-auto">
                     
                     <li class="nav-item">
-                        <a class="nav-link active" href="#" onclick="switchTab('tab-一')">一</a>
+                        <a class="nav-link active" href="#" onclick="switchTab('tab-一')
+                        ">一</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="#" onclick="switchTab('tab-二')">二</a>
+                        <a class="nav-link " href="#" onclick="switchTab('tab-二')
+                        ">二</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="#" onclick="switchTab('tab-三')">三</a>
+                        <a class="nav-link " href="#" onclick="switchTab('tab-三')
+                        ">三</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="#" onclick="switchTab('tab-四')">四</a>
+                        <a class="nav-link " href="#" onclick="switchTab('tab-四')
+                        ">四</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link " href="#" onclick="switchTab('tab-五')">五</a>
+                        <a class="nav-link " href="#" onclick="switchTab('tab-五')
+                        ">五</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <!-- 内容区（所有栏目内容都在这里，默认只显示第一个） -->
+    <!-- 内容区（核心：三元表达式识别链接，实现黄色标注+跳转） -->
     <div class="container">
         
         <div id="tab-一" class="content-area active">
@@ -57,11 +73,15 @@
                     
                     <tr>
                         <th>语录一</th>
-                        <td>人生不可能每一步都是正确的，选错了就选错了。不要一遍一遍的后悔，也不要总是责怪从前的自己，因为他当时站在雾里也很迷茫。所以不必回头看，蔷薇今年谢了，明年还会再开。总会有人陪你看不同的风景，勇敢点，向前走，别回头。</td>
+                        <td>
+                            人生不可能每一步都是正确的，选错了就选错了。不要一遍一遍的后悔，也不要总是责怪从前的自己，因为他当时站在雾里也很迷茫。所以不必回头看，蔷薇今年谢了，明年还会再开。总会有人陪你看不同的风景，勇敢点，向前走，别回头。
+                        </td>
                     </tr>
                     <tr>
                         <th>语录二</th>
-                        <td>我走在我自己的人生路上，哪怕路途的风雨再大，大到我步履维艰，哪怕荆棘丛生，刺得我伤痕遍布，我也仍旧痴痴笑笑，我体会此中滋味。</td>
+                        <td>
+                            我走在我自己的人生路上，哪怕路途的风雨再大，大到我步履维艰，哪怕荆棘丛生，刺得我伤痕遍布，我也仍旧痴痴笑笑，我体会此中滋味。
+                        </td>
                     </tr>
                 </table>
             </div>
@@ -74,15 +94,27 @@
                     
                     <tr>
                         <th>短句一</th>
-                        <td>星光不负赶路人，时光不负有心人。</td>
+                        <td>
+                            星光不负赶路人，时光不负有心人。
+                        </td>
                     </tr>
                     <tr>
                         <th>短句二</th>
-                        <td>慢慢来，谁还没有一个努力的过程。</td>
+                        <td>
+                            慢慢来，谁还没有一个努力的过程。
+                        </td>
                     </tr>
                     <tr>
                         <th>短句三</th>
-                        <td>你坚持的东西，总有一天会反过来拥抱你。</td>
+                        <td>
+                            你坚持的东西，总有一天会反过来拥抱你。
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>个人页面</th>
+                        <td>
+                            <a href="https://hch4188.github.io/资料页面.html" target="_blank" class="custom-link">https://hch4188.github.io/资料页面.html</a>
+                        </td>
                     </tr>
                 </table>
             </div>
@@ -95,11 +127,15 @@
                     
                     <tr>
                         <th>提示一</th>
-                        <td>生活需要热情，更需要自律，积极和勤奋。</td>
+                        <td>
+                            生活需要热情，更需要自律，积极和勤奋。
+                        </td>
                     </tr>
                     <tr>
                         <th>提示二</th>
-                        <td>把不忙不闲的工作做得出色，把不咸不淡的生活过得精彩。</td>
+                        <td>
+                            把不忙不闲的工作做得出色，把不咸不淡的生活过得精彩。
+                        </td>
                     </tr>
                 </table>
             </div>
@@ -112,11 +148,15 @@
                     
                     <tr>
                         <th>感悟一</th>
-                        <td>简单的事重复做，你就是专家；重复的事用心做，你就是赢家。</td>
+                        <td>
+                            简单的事重复做，你就是专家；重复的事用心做，你就是赢家。
+                        </td>
                     </tr>
                     <tr>
                         <th>感悟二</th>
-                        <td>生活不是等待暴风雨过去，而是学会在雨中跳舞。</td>
+                        <td>
+                            生活不是等待暴风雨过去，而是学会在雨中跳舞。
+                        </td>
                     </tr>
                 </table>
             </div>
@@ -129,11 +169,15 @@
                     
                     <tr>
                         <th>碎念一</th>
-                        <td>日子平淡，好在我喜欢。</td>
+                        <td>
+                            日子平淡，好在我喜欢。
+                        </td>
                     </tr>
                     <tr>
                         <th>碎念二</th>
-                        <td>慢慢来，一切都会好起来的。</td>
+                        <td>
+                            慢慢来，一切都会好起来的。
+                        </td>
                     </tr>
                 </table>
             </div>
